@@ -1,0 +1,13 @@
+void make_prime()  {      
+	memset(prime, 1, sizeof(prime));
+	prime[0]=false;     
+	prime[1]=false;     
+	int N=31700;      
+	for (int i=2;  i<N;  i++)         
+	  if (prime[i]) {          
+		primes[++cnt ]=i;     
+		for (int k=i*i; k<N; k+=i)        
+			prime[k]=false;       
+	  }      
+	return;
+}
